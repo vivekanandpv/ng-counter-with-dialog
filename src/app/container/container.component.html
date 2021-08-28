@@ -1,0 +1,16 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4 text-center">Counter {{counter}}</h1>
+
+    <div class="row mt-5">
+      <div class="col text-center">
+        <app-button [cssClass]="['btn', 'btn-primary']" [text]="'Increment'" (onClick)="increment()"></app-button>
+      </div>
+      <div class="col text-center">
+        <app-button [cssClass]="['btn', 'btn-danger']" [text]="'Decrement'" (onClick)="decrement()"></app-button>
+      </div>
+    </div>
+  </div>
+
+  <app-dialog [showModal]="isBreached$"></app-dialog>
+</div>
