@@ -1,6 +1,9 @@
-<p>Sample: {{bar.counter}}</p>
+<p>Sample: {{counter$ | async}}</p>
 
-<button class="btn btn-primary" (click)="bar.increment()">Increment</button>
-<button class="btn btn-warning ml-2" (click)="bar.decrement()">Decrement</button>
+<!--<button class="btn btn-primary" (click)="increment()">Increment</button>-->
+<!--<button class="btn btn-warning ml-2" (click)="decrement()">Decrement</button>-->
+
+<button class="btn btn-primary" (click)="incrementLocal()">Increment</button>
+<button class="btn btn-warning ml-2" (click)="decrementLocal()">Decrement</button>
 
 <hr>

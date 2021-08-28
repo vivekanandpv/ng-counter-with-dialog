@@ -1,6 +1,9 @@
-<p>Playground: {{data.counter}}</p>
+<p>Playground: {{counter$ | async}}</p>
 
-<button class="btn btn-primary" (click)="data.increment()">Increment</button>
-<button class="btn btn-warning ml-2" (click)="data.decrement()">Decrement</button>
+<!--<button class="btn btn-primary" (click)="increment()">Increment</button>-->
+<!--<button class="btn btn-warning ml-2" (click)="decrement()">Decrement</button>-->
+
+<button class="btn btn-primary" (click)="incrementLocal()">Increment</button>
+<button class="btn btn-warning ml-2" (click)="decrementLocal()">Decrement</button>
 
 <hr>
