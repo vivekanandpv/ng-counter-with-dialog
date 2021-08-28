@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { ContainerComponent } from './container/container.component';
 import { ButtonComponent } from './button/button.component';
 import { DialogComponent } from './dialog/dialog.component';
+import { PlaygroundComponent } from './playground/playground.component';
+import { SampleComponent } from './sample/sample.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContainerComponent,
     ButtonComponent,
-    DialogComponent
+    DialogComponent,
+    PlaygroundComponent,
+    SampleComponent
   ],
   imports: [
     BrowserModule,
