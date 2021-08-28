@@ -8,6 +8,9 @@ import { ButtonComponent } from './button/button.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { PlaygroundComponent } from './playground/playground.component';
 import { SampleComponent } from './sample/sample.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { SampleComponent } from './sample/sample.component';
     ButtonComponent,
     DialogComponent,
     PlaygroundComponent,
-    SampleComponent
+    SampleComponent,
+    NavbarComponent,
+    HomeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
