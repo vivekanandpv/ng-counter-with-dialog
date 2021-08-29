@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup, NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-t-form',
@@ -7,13 +8,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TFormComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
-  onSubmit(data: any) {
-    console.log('form data', data);
+  onSubmit(form: NgForm) {
+    if (form.invalid) {
+      alert('Invalid form, cannot submit');
+    } else {
+      console.log('form data', form.value);
+    }
+
+    //  all in one approach
+    // if (form.invalid) {
+    //   let errors = '';
+    //
+    //   for (const ctrl in form.form.controls) {
+    //     errors += ctrl + ' >> ' + JSON.stringify(form.controls[ctrl].errors) + '\n';
+    //   }
+    //
+    //   alert(errors);
+    // } else {
+    //   console.log('form data', form.value);
+    // }
+
+  }
+
+  showErrors(form: FormGroup) {
+    for (const ctrl in form.controls) {
+      console.log(ctrl, form.controls[ctrl].errors);
+    }
   }
 
 }
