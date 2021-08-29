@@ -24,6 +24,11 @@ const routes: Routes = [
       .then(m => m.FinanceModule)
   },
   {
+    path: 'ops',
+    loadChildren: () => import('./ops/ops.module')
+      .then(m=>m.OpsModule)
+  },
+  {
     path: '**',
     component: NotFoundComponent
   }
