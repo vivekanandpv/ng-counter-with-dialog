@@ -3,6 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from "./home/home.component";
 import {AboutComponent} from "./about/about.component";
 import {NotFoundComponent} from "./not-found/not-found.component";
+import {aboutRoutes} from "./routes/about-routes";
 
 const routes: Routes = [
   {
@@ -14,23 +15,7 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent
   },
-  {
-    path: 'about',
-    children: [
-      {
-        path: '',
-        component: AboutComponent
-      },
-      {
-        path: ':country',
-        component: AboutComponent
-      },
-      {
-        path: ':country/:year',
-        component: AboutComponent
-      },
-    ]
-  },
+  aboutRoutes,
   {
     path: 'finance',
     loadChildren: () => import('./finance/finance.module')
