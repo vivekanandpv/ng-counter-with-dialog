@@ -16,7 +16,20 @@ const routes: Routes = [
   },
   {
     path: 'about',
-    component: AboutComponent
+    children: [
+      {
+        path: '',
+        component: AboutComponent
+      },
+      {
+        path: ':country',
+        component: AboutComponent
+      },
+      {
+        path: ':country/:year',
+        component: AboutComponent
+      },
+    ]
   },
   {
     path: 'finance',
