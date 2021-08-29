@@ -24,7 +24,12 @@ const routes: Routes = [
   {
     path: 'ops',
     loadChildren: () => import('./ops/ops.module')
-      .then(m=>m.OpsModule)
+      .then(m => m.OpsModule)
+  },
+  {
+    path: 'forms',
+    loadChildren: () => import('./forms/forms.module')
+      .then(m => m.FormsModule)
   },
   {
     path: '**',
