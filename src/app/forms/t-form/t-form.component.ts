@@ -6,14 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./t-form.component.scss']
 })
 export class TFormComponent implements OnInit {
+  username = 'default';
+  password = 'password';
+  remember = true;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onSubmit(data: any) {
-    console.log('form data', data);
+  onSubmit() {
+    const formData = {
+      username: this.username,
+      password: this.password,
+      remember: this.remember
+    }
+    console.log('form data', formData);
   }
 
 }
