@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from "./home/home.component";
 import {AboutComponent} from "./about/about.component";
 import {NotFoundComponent} from "./not-found/not-found.component";
@@ -15,8 +15,13 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'about/:country',
+    path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'finance',
+    loadChildren: () => import('./finance/finance.module')
+      .then(m => m.FinanceModule)
   },
   {
     path: '**',
@@ -28,4 +33,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
